@@ -24,6 +24,9 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     break;
+                case"safari":
+                    driver=new SafariDriver();
+                    break;
             }
         }
         return driver;
