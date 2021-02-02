@@ -1,14 +1,13 @@
 package com.trycloud.utilities;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigurationReader {
 
     private static Properties configFile;
-    static {
+
+    public static void inputReader() {
         try {
             String path = "configuration.properties";
             FileInputStream input = new FileInputStream(path);
@@ -19,6 +18,7 @@ public class ConfigurationReader {
             e.printStackTrace();
         }
     }
+
     public static String getProperty(String keyName) {
         return configFile.getProperty(keyName);
     }
