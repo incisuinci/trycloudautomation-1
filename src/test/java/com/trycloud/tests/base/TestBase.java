@@ -36,7 +36,7 @@ public abstract class TestBase extends SuitStarter {
 
         WebElement loginButton=driver.findElement(By.xpath("//input[@id='submit-form']"));
         loginButton.click();
-
+//change
 
     }
 }
