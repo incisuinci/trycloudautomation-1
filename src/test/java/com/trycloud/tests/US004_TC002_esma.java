@@ -1,13 +1,13 @@
 package com.trycloud.tests;
 
 import com.trycloud.Pages.TalkPagePOM;
-import com.trycloud.tests.base.TestBaseWithLogin;
+import com.trycloud.tests.base.TestBase;
 import com.trycloud.utilities.Driver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-public class US004_TC002_esma extends TestBaseWithLogin {
+public class US004_TC002_esma extends TestBase {
 
 
     @Test(description = "Validation of sending message by searching user")

@@ -10,7 +10,7 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class TalkPagePOM {
+public class TalkPagePOM extends MenuBarPOM {
     public  String message = "sorry not sorry";
 
     @FindBy(xpath = "(//div[@class='select2-search'])[2]/input")
@@ -30,7 +30,7 @@ public class TalkPagePOM {
     public List<WebElement> messages;
 
     public void sendingMessageThroughTalk(String user) {
-        MainPagePOM mainPagePOM = new MainPagePOM();//for using the header I created the MainPagePOM object
+        MenuBarPOM mainPagePOM = new MenuBarPOM();//for using the header I created the MainPagePOM object
         PageFactory.initElements(Driver.getDriver(), mainPagePOM);//initialized it
         mainPagePOM.buttonTalk.click();//click to talk
         BrowserUtils.sleep(3);
