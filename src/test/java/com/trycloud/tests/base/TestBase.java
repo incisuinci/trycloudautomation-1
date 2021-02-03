@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public abstract class TestBase extends SuitStarter {
 
 
-    @BeforeMethod
+    @BeforeClass
     public void setupClass() {
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -28,10 +28,10 @@ public abstract class TestBase extends SuitStarter {
 
     }
 
-    //@AfterMethod
-    // public void teardownClass() {
-    //    Driver.getDriver().close();
-    //}
+    @AfterClass
+    public void teardownClass() {
+       Driver.getDriver().close();
+    }
 
     public void login() {
 
