@@ -17,7 +17,7 @@ public class TalkPagePOM {
     public WebElement InputSearchBoxInTalk;
 
     @FindBy(xpath = "//div[@id='s2id_select-participants']/a")
-    public WebElement NextConversationText;//in order to send keys to InputSearchBoxInTalk first you need to click to this element
+    public WebElement NewConversationText;//in order to send keys to InputSearchBoxInTalk first you need to click to this element
 
     @FindBy(xpath = "//div[contains(@id,'select2-result-label-')]")//list for all users in the talk search box
     public List<WebElement> users;
@@ -36,13 +36,11 @@ public class TalkPagePOM {
         BrowserUtils.sleep(3);
         PageFactory.initElements(Driver.getDriver(), this);// initliaze this pages elements
 
-        NextConversationText.click();//click to search button
+        NewConversationText.click();//click to search button
         InputSearchBoxInTalk.sendKeys(user);//search for a user
 
         BrowserUtils.sleep(3);
-//        talkPagePOM.users.forEach(p->{
-//            System.out.println(p.getText());
-//        });
+
         users.get(0).click();//get the first one appears on the list
 
         BrowserUtils.sleep(3);
