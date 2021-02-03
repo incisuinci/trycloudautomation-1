@@ -7,34 +7,40 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase extends SuitStarter {
-    public WebDriver driver;
 
-    @BeforeClass
+
+    @BeforeMethod
     public void setupClass() {
-        Driver.getDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Driver.getDriver().get("https://app.trycloud.net/index.php/login");
+
+
 
     }
 
-    @AfterClass
-    public void teardownClass() {
-        driver.close();
-    }
+    //@AfterMethod
+    // public void teardownClass() {
+    //    Driver.getDriver().close();
+    //}
 
-    public void login(){
-        WebElement loginBox=driver.findElement(By.xpath("//input[@id='user']"));
-        loginBox.sendKeys(ConfigurationReader.getProperty("username83"));
+    public void login() {
 
-        WebElement passwordBox=driver.findElement(By.xpath("//input[@id='password']"));
+
+        WebElement loginBox = Driver.getDriver().findElement(By.xpath("//input[@id='user']"));
+        loginBox.sendKeys(ConfigurationReader.getProperty("username23"));
+
+        WebElement passwordBox = Driver.getDriver().findElement(By.xpath("//input[@id='password']"));
         passwordBox.sendKeys(ConfigurationReader.getProperty("password"));
 
-        WebElement loginButton=driver.findElement(By.xpath("//input[@id='submit-form']"));
+        WebElement loginButton = Driver.getDriver().findElement(By.xpath("//input[@id='submit']"));
         loginButton.click();
 
 
