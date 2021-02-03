@@ -11,19 +11,19 @@ public class MainPagePOM extends TestBase {
 
 
     @FindBy(xpath = "//ul[@id='appmenu']/li[1]")
-    WebElement buttonFile;
+    public  WebElement buttonFile;
     @FindBy(xpath = "//ul[@id='appmenu']/li[2]")
-    WebElement buttonActivity;
+    public WebElement buttonActivity;
     @FindBy(xpath = "//ul[@id='appmenu']/li[3]")
-    WebElement buttonGallery;
+    public WebElement buttonGallery;
     @FindBy(xpath = "//ul[@id='appmenu']/li[4]")
-    WebElement buttonTalk;
+    public WebElement buttonTalk;
     @FindBy(xpath = "//ul[@id='appmenu']/li[5]")
-    WebElement buttonCalendar;
+    public WebElement buttonCalendar;
     @FindBy(xpath = "//ul[@id='appmenu']/li[6]")
-    WebElement buttonDeck;
+    public WebElement buttonDeck;
     @FindBy(xpath = "//ul[@id='appmenu']/li[7]")
-    WebElement buttonAnnouncement;
+    public WebElement buttonAnnouncement;
 
     public void ButtonActivityClick() {
         buttonActivity.click();
