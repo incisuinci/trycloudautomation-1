@@ -24,7 +24,7 @@ public abstract class TestBase extends SuitStarter {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         login();
 
-
+//
 
     }
 
