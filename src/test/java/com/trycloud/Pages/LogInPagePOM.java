@@ -5,13 +5,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class LogInPagePOM {
     @FindBy(id = "user")
-    WebElement inputUserName;
+    public WebElement inputUserName;
     @FindBy(id = "password")
-    WebElement inputPassword;
+   public WebElement inputPassword;
     @FindBy(id = "submit")
-    WebElement buttonLogin;
+    public WebElement buttonLogin;
     @FindBy(id = "lost-password")
-    WebElement linkForgotPassword;
+    public WebElement linkForgotPassword;
 
 
     public void LogIn(String userName,String password){
