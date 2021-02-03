@@ -17,8 +17,7 @@ public class US004_TC002_esma extends TestBaseWithLogin {
         Assert.assertEquals(talkPagePOM.messages.get(talkPagePOM.messages.size() - 2).getText(), talkPagePOM.message, "The message is not sent and displayed!!");
 
     }
-    //change
-    //fdndjfjfn
+
 
     @AfterClass
     public void close() {
