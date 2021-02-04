@@ -6,7 +6,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 import java.util.List;
 
@@ -30,7 +29,10 @@ public class TalkPagePOM extends MenuBarPOM {
     public List<WebElement> messages;
 
     @FindBy(xpath = "//ul[@id='spreedme-room-list']/li")
-    List<WebElement>allUsersInTalkPage; // all users that appear on the left side when you open talk
+   public List<WebElement> allUsersInTalkPage; // all users that appear on the left side when you open talk
+
+    @FindBy(xpath = "//a[contains(@data-original-title,'Talk to')]")
+    public List<WebElement>usersInContactDropDown;
 
 
     public void sendingMessageThroughTalk(String user) {

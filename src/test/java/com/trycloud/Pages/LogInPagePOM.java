@@ -14,11 +14,10 @@ public class LogInPagePOM {
     public WebElement linkForgotPassword;
 
 
-    public void LogIn(String userName,String password){
+    public void LogIn(String userName, String password){
         inputUserName.sendKeys(userName);
         inputPassword.sendKeys(password);
         buttonLogin.click();
-
     }
     public void ForgotPassword(){
         linkForgotPassword.click();
