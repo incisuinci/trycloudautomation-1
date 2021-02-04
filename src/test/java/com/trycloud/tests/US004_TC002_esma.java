@@ -21,7 +21,7 @@ public class US004_TC002_esma extends TestBase {
     public void t1() {
         TalkPagePOM talkPagePOM = new TalkPagePOM();
         talkPagePOM.sendingMessageThroughTalk("User50");
-        Assert.assertEquals(talkPagePOM.messages.get(talkPagePOM.messages.size() - 2).getText(), talkPagePOM.message, "The message is not sent and displayed!!");
+        Assert.assertEquals(talkPagePOM.messageClouds.get(talkPagePOM.messageClouds.size() - 2).getText(), talkPagePOM.message, "The message is not sent and displayed!!");
 
     }
 
