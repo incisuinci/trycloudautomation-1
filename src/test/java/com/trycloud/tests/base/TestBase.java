@@ -28,10 +28,10 @@ public abstract class TestBase extends SuitStarter {
 
     }
 
-    @AfterClass
-    public void teardownClass() {
-       Driver.getDriver().close();
-    }
+//    @AfterClass
+//    public void teardownClass() {
+//       Driver.getDriver().close();
+//    }
 
     public void login() {
 

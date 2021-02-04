@@ -29,6 +29,10 @@ public class TalkPagePOM extends MenuBarPOM {
     @FindBy(xpath = "//div[@class='message']")
     public List<WebElement> messages;
 
+    @FindBy(xpath = "//ul[@id='spreedme-room-list']/li")
+    List<WebElement>allUsersInTalkPage; // all users that appear on the left side when you open talk
+
+
     public void sendingMessageThroughTalk(String user) {
         MenuBarPOM mainPagePOM = new MenuBarPOM();//for using the header I created the MainPagePOM object
         PageFactory.initElements(Driver.getDriver(), mainPagePOM);//initialized it
