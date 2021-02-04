@@ -30,6 +30,8 @@ public class MenuBarPOM {
     public WebElement buttonSettings;
     @FindBy(id = "nextcloud")
     public WebElement buttonHomeNextCloudLogo;
+    @FindBy(xpath ="//div[@id='app-navigation']//a[1]" )
+    public WebElement buttonAllFiles;
 
     public void buttonHomeNextCloudLogoClick() {
         buttonHomeNextCloudLogo.click();
@@ -74,4 +76,6 @@ public class MenuBarPOM {
     public void buttonSettingsClick() {
         buttonSettings.click();
     }
+
+    public void buttonAllFilesClick(){buttonAllFiles.click();}
 }
