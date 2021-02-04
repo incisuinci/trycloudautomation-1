@@ -18,12 +18,20 @@ public class US001_TC001_Deano {
 
         driver.manage().window().maximize();
 
-        driver.get("https://trycloud.net/");
+        /*driver.get("https://trycloud.net/");
 
         driver.findElement(By.id("menu-item-47")).click();
 
+         */
+
+        driver.get("http://qa.trycloud.net/index.php/login?redirect_url=/index.php/apps/files/");
+
+        driver.findElement(By.id("user")).sendKeys("User23");
 
 
+        driver.findElement(By.id("password")).sendKeys("Userpass123");
+
+        driver.findElement(By.id("submit-form")).click();
 
 
 
